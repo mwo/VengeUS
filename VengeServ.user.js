@@ -15,10 +15,7 @@ window.WebSocket = class extends WebSocket {
     constructor() {
         let url = arguments[0],
             bool = url.includes('server');
-        console.log(bool, url);
-        if (bool) {
-            arguments[0] = gameServerURL;
-        }
+        if (bool) arguments[0] = gameServerURL;
         super(...arguments);
     }
 }
