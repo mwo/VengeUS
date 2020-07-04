@@ -16,7 +16,7 @@
             constructor() {
                 let url = arguments[0],
                     bool = url.includes('server');
-                if (bool) arguments[0] = 'wss://krone_rgb.pit.red';
+                arguments[0] = 'wss://krone_rgb.pit.red?isMatchmaker=' + (!bool + []);
                 super(...arguments);
              }
         },
