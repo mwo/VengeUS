@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         VengeServe
-// @namespace    http://tampermonkey.net/
+// @namespace    http://mwo.github.io/
 // @version      0.1
 // @description  bruh
 // @author       You
