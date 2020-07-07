@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         VengeServe
-// @namespace    http://mwo.github.io/
+// @namespace    https://github.com/mwo/VengeServer/
 // @version      0.1
 // @description  bruh
 // @author       You
@@ -15,11 +15,11 @@
         value: class extends WebSocket {
             constructor() {
                 let url = arguments[0],
-                    bool = url.includes('server');
-                arguments[0] = 'wss://krone_rgb.pit.red?isMatchmaker=' + (!bool + []);
+                    bool = /invite/.test(url);
+                arguments[0] = 'wss://venge.herokuapp.com?isMatchmaker=' + (bool + []);
                 super(...arguments);
-             }
+            }
         },
-        configurable: false
+        configurable: !1
     })
 })()
